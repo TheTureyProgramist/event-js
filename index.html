@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+
+<body>
+    <button data-action="open-modal" class="button">Open modal</button>
+    <div class="backdrop js-backdrop">
+        <div class="modal">
+            <h2>Modal Window</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam culpa a laborum minima neque, error nulla dolorum
+                id quaerat consequuntur, labore officia quos ipsa rerum
+                blanditiis. Doloremque natus consequatur delectus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem natus quas nisi nobis harum
+                deleniti, soluta ex cupiditate incidunt reprehenderit, quos aut dolores perferendis labore minus commodi
+                porro assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos quod doloremque
+                inventore! Numquam amet illo mollitia deleniti, ducimus labore maiores odit porro ad velit ex facilis
+                ratione, debitis aperiam.
+            </p>
+            <button type="button" class="button" data-action="close-model">Close</button>
+        </div>
+    </div>
+<form>
+  <p>Choose a color:</p>
+  <label>
+    <input type="radio" name="color" id="red" value="red" checked />
+    Red
+  </label>
+  <label>
+    <input type="radio" name="color" id="white" value="white" />
+    White
+  </label>
+  <label>
+    <input type="radio" name="color" id="green" value="green" />
+    Green
+  </label>
+</form>
+
+<input type="text" placeholder="Your name?" id="name-input">
+<h1>Hello, <span id="name-output">no-name</span>!</h1>
+<input type="text"
+id="validation-input"
+data-length="6"
+placeholder="type 6 symbols">   
+
+<input type="range" id="font-size-control" />
+<br />
+<span id="text">Abrakadabra!</span>
+<ul class="gallery">
+<li>
+<img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+" alt="зображення">
+</li>
+<li>
+<img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+" alt="зображення">
+</li>
+<li>
+<img class="image" src="https://images.pexels.com/photos/11815778/pexels-photo-11815778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+" alt="зображення">
+</li>
+<li>
+<img class="image" src="https://images.pexels.com/photos/6195166/pexels-photo-6195166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="зображення">
+</li>
+<li>
+<img class="image" src="https://images.pexels.com/photos/6957926/pexels-photo-6957926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="зображення">
+</li>
+<li>
+<img class="image" src="https://images.pexels.com/photos/15520825/pexels-photo-15520825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="зображення">
+</li>
+</ul>
+<div id="controls">
+<input type="number" min="0" max="100" step="1" />
+<button type="button" data-action="render">Створити</button>
+<button type="button" data-action="destroy">Очистити</button>
+</div>
+<div id="boxes"></div>
+<link rel="stylesheet" href="./style.css">
+    <script type="module" src="./events.js"></script>
+</body>
+</html>
