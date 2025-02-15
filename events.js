@@ -46,28 +46,39 @@ document.addEventListener('keydown', (e) => {
   gallery.style.transform = `translateX(-${index * 1}vw)`;
 });
 
-const inputNumber = document.querySelector('#input-number');
-const createButton = document.querySelector('[data-action="render"]');
-const destroyButton = document.querySelector('[data-action="destroy"]');
-const boxesContainer = document.querySelector('#boxes');
-createButton.addEventListener('click', () => {
-  const amount = Number(inputNumber.value);
-  createBoxes(amount);
+const numb = document.querySelector('#controls input');
+const create = document.querySelector('[data-action="render"]');
+const destroy = document.querySelector('[data-action="destroy"]');
+const boxes = document.querySelector('#boxes');
+buttonBg.addEventListener('click', (event) => {
+    const page = document.querySelector('#controls');
+    page.style.backgroundColor = randColor();
+    console.log(event.target);
 });
-destroyButton.addEventListener('click', destroyBoxes);
+create.addEventListener('focus', (color) => {
+   const page = document.querySelector('#controls')
+    const red = Math.random() * ((250 - 0) + 0)
+   const green = Math.random() * ((250 - 0) + 0)
+  const blue = Math.random() * ((250 - 0) + 0)
+  page.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+   console.log(color.target)
+});
+destroy.addEventListener('click', destroyBoxes);
 function createBoxes(amount) {
   destroyBoxes(); 
-  const fragment = document.createDocumentFragment();
+  let size = 1;
   for (let i = 0; i < amount; i++) {
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomColor();
+    const box = document.createElement('div');
+    box.style.width = `${size}vw`;
+    box.style.height = `${size}vw`;
+    box.style.backgroundColor = randColor();
+    box.style.margin = "5px";
+    box.addEventListener('click', () => {
+    });
   }
-  boxesContainer.appendChild(fragment);
 }
-function getRandomColor() {
- const red = Math.random() * ((250 - 0) + 0)
-const green = Math.random() * ((250 - 0) + 0)
-const blue = Math.random() * ((250 - 0) + 0)
-    return `rgb(${red}, ${green}, ${blue})`
+function destroyBoxes() {
+  while (boxes.firstChild) {
+    boxes.removeChild(boxes.firstChild);
+  }
 }
