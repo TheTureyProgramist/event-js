@@ -30,7 +30,6 @@ validation.addEventListener('blur', () => {
   validation.classList.toggle('valid', isValid);
   validation.classList.toggle('invalid', !isValid);
 });
-
 const controlFont = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 controlFont.addEventListener('input', () => {
